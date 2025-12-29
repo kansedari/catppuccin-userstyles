@@ -17,12 +17,14 @@
 
 @import "https://raw.githubusercontent.com/kansedari/catppuccin-userstyles/refs/heads/main/lib/lib.less";
 
+@_urlAccent: if((@accentColor = subtext0), gray, @accentColor);
+
 @-moz-document domain("codeberg.org") {
   @import (css)
-    url("https://kansedari.github.io/catppuccin-gitea/theme-catppuccin-light-@{accentColor}.css")
+    url("https://kansedari.github.io/catppuccin-gitea/theme-catppuccin-light-@{_urlAccent}.css")
     (prefers-color-scheme: light);
   @import (css)
-    url("https://kansedari.github.io/catppuccin-gitea/theme-catppuccin-dark-@{accentColor}.css")
+    url("https://kansedari.github.io/catppuccin-gitea/theme-catppuccin-dark-@{_urlAccent}.css")
     (prefers-color-scheme: dark);
 }
 
